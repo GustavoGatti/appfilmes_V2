@@ -1,0 +1,36 @@
+<div class="modal fade" id="add-diretor" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Novo Diretor</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="name" class="col-form-label">Id:</label>
+                        <input type="number" class="form-control" id="id" [(ngModel)]="diretor.id" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-form-label">Nome:</label>
+                        <input type="text" class="form-control" id="name" [(ngModel)]="diretor.name" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-form-label">Rank:</label>
+                        <input type="number" class="form-control" id="rank" [(ngModel)]="diretor.rank" [ngModelOptions]="{standalone: true}">
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-form-label">Quantidade de Filmes:</label>
+                        <input type="number" class="form-control" id="count_movies" [(ngModel)]="diretor.count_movies" [ngModelOptions]="{standalone: true}">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" (click)="SalvarDiretor()">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>

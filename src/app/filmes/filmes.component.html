@@ -1,0 +1,31 @@
+<div class="card text-center">
+    <div class="card-header">
+        <ul class="nav nav-pills card-header-pills">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="modal" data-target="#add-filme">Novo</a>
+            </li>
+        </ul>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead class="thead-dark">
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Rank</th>
+                <th>Quant. Filmes</th>
+                <th>Ações</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let diretor of diretores">
+                    <td> {{ diretor.id }} </td>
+                    <td> {{ diretor.name }} </td>
+                    <td> {{ diretor.rank }} </td>
+                    <td> {{ diretor.count_movies }} </td>
+                    <td><button class="btn btn-primary" (click)="EditarDiretor(diretor.id)">Editar</button> | <button
+                            class="btn btn-danger" (click)="DeletarDiretor(diretor.id)">Deletar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<app-add-filme></app-add-filme>
